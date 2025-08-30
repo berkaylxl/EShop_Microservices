@@ -2,6 +2,7 @@
 
 namespace BuildingBlocks.CQRS
 {
+	//like void
 	public interface ICommand : ICommand<Unit>
 	{
 

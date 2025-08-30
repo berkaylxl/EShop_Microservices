@@ -10,16 +10,23 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Products\UpdateProduct\**" />
+    <Content Remove="Products\UpdateProduct\**" />
+    <EmbeddedResource Remove="Products\UpdateProduct\**" />
+    <None Remove="Products\UpdateProduct\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Carter" Version="8.0.0" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.6" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Products\DeleteProduct\" />
-    <Folder Include="Products\UpdateProduct\" />
+    <ProjectReference Include="..\..\..\BuildingBlocks\BuildingBlocks\BuildingBlocks.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\BuildingBlocks\BuildingBlocks\BuildingBlocks.csproj" />
+    <Folder Include="Products\DeleteProduct\" />
   </ItemGroup>
 
 </Project>
